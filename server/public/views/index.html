@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekend Challenge 3: Calculator</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../vendor/jquery.min.js"></script>
+    <script src="../scripts/clientapp.js"></script>
+  </head>
+  <body>
+    <h1>Weekend Challenge 3: Calculator</h1>
+    <form id="doMath">
+      <label for="inputName">Add a number:</label>
+      <input type="text" id="varA" name="varA" />
+      <button id="submit" class ="numA">Submit</button><br />
+      <label for="inputName">Add another number:</label>
+      <input type="text" id="var-b" name="var-b" />
+      <button id="submit" class="numB">Submit</button>
+    </form>
+    <h2>Now do some math!</h2>
+    <div id="ops">
+      <button class="add">+</button>
+      <button class="sub">-</button>
+      <button class="mult">*</button>
+      <button class="slash">/</button>
+    </div>
+    <h2 class="answer">The answer is:</h2>
+  </body>
+</html>
