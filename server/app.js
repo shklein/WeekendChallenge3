@@ -14,12 +14,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-//ROUTES
-
+//Routes
 app.use('/add', add);
 app.use('/sub', sub);
 app.use('/mult', mult);
 app.use('/slash', slash);
+
 
 app.get('/*', function(req, res) {
   var file = req.params[0] || 'views/index.html';

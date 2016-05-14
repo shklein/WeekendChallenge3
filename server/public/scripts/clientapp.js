@@ -1,36 +1,44 @@
+var statement = {};
+var varA = 0;
+var varB = 0;
+var op = " ";
+
 $(document).ready(function () {
-var statement = 'test';
+
 //event listeners
 $('.numA').on('click', function (){
   event.preventDefault();
-  console.log('works');
-  //save input to object
+  varA = $('#varA').val();
 });
 
 $('.numB').on('click', function () {
   event.preventDefault();
-  console.log('works');
-  //save input to object
+  varB = $('#varB').val();
 });
 
-$('#ops').on('click', function (){
-  console.log('works');
-  //save class to object
-});
+$('#ops').on('click', 'button', function (){
+  op = ($(this).attr('class'));
+  statement = {
+    x: varA,
+    y: varB,
+    type: op
+  }
 
-doMath();
+doMath(statement);
+  });
 
-function doMath () {
-  //if (statement.length? == 3)
+
+function doMath (object) {
     $.ajax({
       type: 'POST',
-      url: '/',
-      data: statement,
+      url: '/routes/' + object.type,
+      data: object,
       success: function(response) {
         console.log('got it');
         }
     })
-  }
+  };
+
 
   function answer () {
     $.ajax({
