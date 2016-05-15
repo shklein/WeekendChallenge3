@@ -3,18 +3,17 @@ var router = express.Router();
 
 
 //Data
-var statement = {};
-
+var statement;
+var answer;
 //Routes
 router.post('/', function (req, res) {
-  res.send(true);
+  statement=req.body;
+  answer = Number(statement.x) + Number(statement.y);
+  res.send(answer);
+  console.log(answer);
 });
 
-router.get('/', function (req, res) {
-  var key = a + b;
-  res.send(key);
-  var key = 0;
-});
+
 
 
 

@@ -28,27 +28,30 @@ doMath(statement);
   });
 
 
+
+
 function doMath (object) {
     $.ajax({
       type: 'POST',
       url: '/' + object.type,
       data: object,
       success: function(response) {
-        console.log('got it');
+        console.log(response);
+        $('#answer-box').text(response);
         }
     })
   };
 
 
-  function answer () {
-    $.ajax({
-      type: 'GET',
-      url: '/',
-      data: res,
-      success: function (response){
-        $('#answer').text(response);
-      }
-    })
-  }
+  // function solution () {
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: '/',
+  //     success: function(answer) {
+  //       console.log(answer);
+  //       $('#answer').text(answer);
+  //     }
+  //   })
+  // }
 
   });
