@@ -9,13 +9,12 @@
   <body>
     <h1>Weekend Challenge 3: Calculator</h1>
     <form id="doMath">
-      <label for="inputName">Add a number:</label>
-      <input type="text" id="varA" name="varA" />
-      <button id="submit" class ="numA">Submit</button><br />
-      <label for="inputName">Add another number:</label>
-      <input type="text" id="varB" name="varB" />
-      <button id="submit" class="numB">Submit</button>
-    </form>
+        <label for="inputName">Add a number:</label>
+        <input type="text" id="varA" name="varA" />
+        <br /><br />
+        <label for="inputName">Add another number:</label>
+        <input type="text" id="varB" name="varB" />
+      </form>
     <h2>Now do some math!</h2>
     <div id="ops">
       <button class="add">+</button>
@@ -23,6 +22,12 @@
       <button class="mult">*</button>
       <button class="slash">/</button>
     </div>
-    <h2 class="answer-box">The answer is:</h2>
+    <div id="answer-box">
+    </div>
+    <div>
+      <button id="clear-button">Reset</button>
+    </div>
+  </form>
+
   </body>
 </html>

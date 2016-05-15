@@ -5,19 +5,14 @@ var op = " ";
 
 $(document).ready(function () {
 
-//event listeners
-$('.numA').on('click', function (){
-  event.preventDefault();
-  varA = $('#varA').val();
-});
-
-$('.numB').on('click', function () {
-  event.preventDefault();
-  varB = $('#varB').val();
-});
+//event listener
 
 $('#ops').on('click', 'button', function (){
+  event.preventDefault();
+  varA = $('#varA').val();
+  varB = $('#varB').val();
   op = ($(this).attr('class'));
+
   statement = {
     x: varA,
     y: varB,
@@ -27,7 +22,10 @@ $('#ops').on('click', 'button', function (){
 doMath(statement);
   });
 
-
+$('#clear-button').on('click', function (){
+  document.getElementById("doMath").reset();
+  console.log('Reset!');
+})
 
 
 function doMath (object) {
@@ -37,21 +35,11 @@ function doMath (object) {
       data: object,
       success: function(response) {
         console.log(response);
-        $('#answer-box').text(response);
+        $('#answer-box').append('<h2>The answer is:\t' + response + '</h2>');
         }
     })
   };
 
 
-  // function solution () {
-  //   $.ajax({
-  //     type: 'GET',
-  //     url: '/',
-  //     success: function(answer) {
-  //       console.log(answer);
-  //       $('#answer').text(answer);
-  //     }
-  //   })
-  // }
 
   });

@@ -7,10 +7,10 @@ var statement;
 var answer;
 //Routes
 router.post('/', function (req, res) {
-  statement=req.body;
+  statement = req.body;
   answer = Number(statement.x) + Number(statement.y);
-  res.send(answer);
-  console.log(answer);
+  res.send(answer.toString());
+  console.log(answer.toString());
 });
 
 

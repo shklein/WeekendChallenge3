@@ -1,8 +1,17 @@
-#ops button {
+button {
   text-align: center;
   font-size: 25px;
   margin: 25px;
   height: 50px;
   width: 50px;
+  border-radius: 10px;
+}
+
+#clear-button {
+  text-align: center;
+  font-size: 25px;
+  margin: 25px;
+  height: 50px;
+  width: 100px;
   border-radius: 10px;
 }
