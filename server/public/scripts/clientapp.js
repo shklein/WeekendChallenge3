@@ -31,7 +31,7 @@ doMath(statement);
 function doMath (object) {
     $.ajax({
       type: 'POST',
-      url: '/routes/' + object.type,
+      url: '/' + object.type,
       data: object,
       success: function(response) {
         console.log('got it');

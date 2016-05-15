@@ -6,15 +6,17 @@ var router = express.Router();
 var statement = {};
 
 //Routes
+router.post('/', function (req, res) {
+  res.send(true);
+});
+
 router.get('/', function (req, res) {
   var key = a + b;
   res.send(key);
   var key = 0;
 });
 
-router.post('/', function (req, res) {
-  res.send(true);
-});
+
 
 
 module.exports = router;
