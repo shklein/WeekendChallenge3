@@ -22,9 +22,8 @@ $('#ops').on('click', 'button', function (){
 doMath(statement);
   });
 
-$('#clear-button').on('click', function (){
-  document.getElementById("doMath").reset();
-  console.log('Reset!');
+$('#clear-button').on('click', function () {
+  clearAll();
 })
 
 
@@ -40,6 +39,11 @@ function doMath (object) {
     })
   };
 
+function clearAll() {
+  $('#doMath').find("input[type=text], textarea").val(" ");
+  op = " ";
+  $('#answer-box').empty();
+};
 
 
   });
